@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8" /> 
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test d'une requête Ajax</title>
+    </head>
+
+    <body id="bloc_page">
+        <div id="content">
+            <form method="post" action="requete_ajax.js">
+                <p id="pseudo_text">
+                    <label for="pseudo">Votre pseudo</label> : <input id="pseudo_name" type="text" name="pseudo" />
+                    <input id="button" type="button" value="Valider" />
+                    <p id="validation"></p>
+                </p>
+            </form>
+
+            <script src="{{ url_for('static', filename= 'requete_ajax.js') }}"></script>
+
+            <div id="result">
+                Voici le pseudo choisi : <span id="response_pseudo_name"></span>
+            </div>
+        </div>
+    </body>
+
+</html>
