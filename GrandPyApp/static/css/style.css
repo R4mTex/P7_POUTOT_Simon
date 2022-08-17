@@ -16,6 +16,12 @@ body {
     height: 45px;
 }
 
+#history_label{
+    position: relative;
+    left: 5px;
+    text-decoration: underline;
+}
+
 #result_question {
     display: none;
     margin-bottom: 10px;
@@ -27,6 +33,30 @@ body {
 #form_question {
     padding: 15px;
     border: 5px solid red;
+}
+
+#loading_icon {
+    display: none;
+    float: right;
+    height: 50px;
+    width: 50px;
+    animation: rotate 1000ms linear infinite;
+    animation-play-state: paused;
+    border: 5px solid pink;
+}
+
+#question_zone {
+    margin-right: 505px;
+    border: 5px solid black;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #form_title_question {
@@ -57,4 +87,9 @@ body {
 
 .list-inline-item {
     text-decoration: underline;
+}
+
+#asked_question li {
+    position: relative;
+    left: -35px;
 }

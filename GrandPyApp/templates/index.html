@@ -30,11 +30,18 @@
                 </div>
             </header>
             <section id="result_question">
-                <output type="text" name="text_response" id="asked_question" value="">
+                <label for="history" id="history_label">
+                    Voici votre historique :
+                </label>
+                <ul name="historical" id="asked_question">
+                </ul>
             </section>
             <form id="form_question" role="form">
                 <h2 id="form_title_question">Posez votre question</h2>
-                <input type="search" name="question" id="form_input_question" placeholder="Laquelle ?" size="60" autofocus required>
+                <div id="question_zone">
+                    <input type="search" name="question" id="form_input_question" value="" placeholder="Laquelle ?" size="60" autofocus required >
+                    <img src="{{ url_for('static', filename='css/loading.png') }}" id="loading_icon" class="icon">
+                </div>
                 <input type="button" name="button" id="form_send_button" class="btn btn-lg btn-primary btn-block" value="Prés à envoyer" onclick="script()">
             </form>
             <footer id="footer_section">
