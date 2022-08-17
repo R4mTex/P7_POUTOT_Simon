@@ -1,30 +1,57 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GrandPyApp research">
+    <meta name="author" content="POUTOT Simon">
 
-    <head>
-        <meta charset="utf-8" /> 
-        <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Test d'une requête Ajax</title>
-    </head>
+    <title>GrandPyApp</title>
 
-    <body id="bloc_page">
-        <div id="content">
-            <form method="post" action="requete_ajax.js">
-                <p id="pseudo_text">
-                    <label for="pseudo">Votre pseudo</label> : <input id="pseudo_name" type="text" name="pseudo" />
-                    <input id="button" type="button" value="Valider" />
-                    <p id="validation"></p>
-                </p>
+    <link href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename= 'css/style.css') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../static/js/ajax_request.js"></script>
+</head>
+
+<body>
+    <div id="bloc_page">
+        <div class="container">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <h2 id="titre_GrandPyApp"><img src="{{ url_for('static', filename='css/grand_pere.png') }}" alt="Logo GrandPyApp"/>
+                            Bienvenue sur GrandPyApp, l'application qui ne fait pas de vieux os !
+                        </h2>
+                    </div> 
+                </div>
+            </header>
+            <section id="result_question">
+                <output type="text" name="text_response" id="asked_question" value="">
+            </section>
+            <form id="form_question" role="form">
+                <h2 id="form_title_question">Posez votre question</h2>
+                <input type="search" name="question" id="form_input_question" placeholder="Laquelle ?" size="60" autofocus required>
+                <input type="button" name="button" id="form_send_button" class="btn btn-lg btn-primary btn-block" value="Prés à envoyer" onclick="script()">
             </form>
-
-            <script src="{{ url_for('static', filename= 'requete_ajax.js') }}"></script>
-
-            <div id="result">
-                Voici le pseudo choisi : <span id="response_pseudo_name"></span>
-            </div>
+            <footer id="footer_section">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">POUTOT Simon</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/R4mTex">GitHub</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/simon-poutot-49944b169/">Likedin</a>
+                    </li>
+                </ul>
+            </footer>
         </div>
-    </body>
+    </div>
+</body>
 
 </html>
