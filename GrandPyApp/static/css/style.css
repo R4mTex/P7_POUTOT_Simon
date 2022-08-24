@@ -1,25 +1,33 @@
 body {
+    height: 100%;
+    width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #eee;
-    border: 5px solid blue;
+}
+
+#titre_principal{
+    text-align: center;
 }
 
 #titre_GrandPyApp {
     margin-bottom: 10px;
+    text-decoration: underline;
     font-size: auto;
-    border: 5px solid yellow;
 }
 
 #logo img {
     width: 50px;
     height: 45px;
+    margin-bottom: 10px;
 }
 
 #history_label{
     position: relative;
-    left: 5px;
+    margin-top: 10px;
+    padding-bottom: 5px;
     text-decoration: underline;
+    font-size: medium;
 }
 
 #result_question {
@@ -27,27 +35,24 @@ body {
     margin-bottom: 10px;
     width: auto;
     height: auto;
-    border: 5px solid brown;
 }
 
 #form_question {
-    padding: 15px;
-    border: 5px solid red;
+    padding: 0px 15px 15px 0px;
 }
 
 #loading_icon {
     display: none;
     float: right;
+    margin-right: 30px;
     height: 50px;
     width: 50px;
     animation: rotate 1000ms linear infinite;
     animation-play-state: paused;
-    border: 5px solid pink;
 }
 
-#question_zone {
+#form_question_zone {
     margin-right: 505px;
-    border: 5px solid black;
 }
 
 @keyframes rotate {
@@ -62,14 +67,12 @@ body {
 #form_title_question {
     font-weight: bold;
     padding: 5px;
-    border: 5px solid black;
 }
 
 #form_input_question {
     padding: 10px;
     font-size: 16px;
     font-style: italic;
-    border: 5px solid green;
 }
 
 #form_send_button {
@@ -81,15 +84,31 @@ body {
 
 #footer_section {
     position: relative;
-    margin-top: 300px;
-    border: 5px solid orange;
+    margin-top: 100%;
+    font-size: larger;
 }
 
 .list-inline-item {
     text-decoration: underline;
 }
 
-#asked_question li {
+#history_question li {
     position: relative;
     left: -35px;
+}
+
+#map {
+    display: none;
+    height: 400px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#grandpyapp_comments{
+    margin-top: 15px;
+    font-size: medium;
+}
+
+[name="GrandPyApp_response"]{
+    color: rgb(131, 2, 2);
 }
