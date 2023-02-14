@@ -1,0 +1,2 @@
+[run]
+omit = GrandPyApp/tests/*, config.py, run.py, GrandPyApp/__init__.py
