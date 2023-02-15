@@ -38,7 +38,7 @@ Si la console est placée dans le dossier du programme, il suffit d'exécuter le
 
 ```python run.py```
 
-Enfin une URL vous sera donnée : * Running on http://127.0.0.1:5000; suivez le lien et vous serez redirigé vers ma page.
+Enfin une URL vous sera donnée : ```* Running on http://127.0.0.1:5000``` suivez le lien et vous serez redirigé vers ma page.
 
 Bon essai.
 
