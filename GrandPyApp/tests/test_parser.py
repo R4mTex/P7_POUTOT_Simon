@@ -9,11 +9,13 @@ def test_should_remove_upper_case():
     expected_value = 'abc'
     assert sut.remove_upper_case(text) == expected_value
 
+
 def test_should_remove_ponctuation():
     sut = Parser
     text = 'a.b!c?'
     expected_value = 'abc'
     assert sut.remove_ponctuation(text) == expected_value
+
 
 def test_should_remove_accent():
     sut = Parser
@@ -21,14 +23,16 @@ def test_should_remove_accent():
     expected_value = 'aoe'
     assert sut.remove_accent(text) == expected_value
 
+
 def test_should_remove_stop_word():
-    sut = Parser 
+    sut = Parser
     stop_words = set(oc_stop_words + custom_stop_words)
     text = 'coucou estce connais ladresse'
     word_tokens = word_tokenize(text)
     expected_value = [word for word in word_tokens if not word.lower() in stop_words]
 
     assert sut.remove_stop_word(text) == expected_value
+
 
 def test_should_parse():
     sut = Parser

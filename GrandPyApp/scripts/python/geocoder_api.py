@@ -1,10 +1,12 @@
+from config import GOOGLE_MAPS_KEY
 import requests
 
-gmk = "AIzaSyAVtCfvLbfgSm8528irK1sEq5SpSA0zcKY"
+gmk = GOOGLE_MAPS_KEY
+
 
 class Geocoder:
     def __init__(self, query):
-         self.query = query
+        self.query = query
 
     def geocoder_api_request(self):
         request = requests.get(f"https://maps.googleapis.com/maps/api/geocode/json?address={self.query}&key={gmk}")
@@ -16,7 +18,7 @@ class Geocoder:
         if data_json['status'] == 'OK':
             data_results = []
             data_results.extend(data_json.get('results'))
-            
+
             long_name = [
                 x.get('address_components', "None") for x in data_results
             ]

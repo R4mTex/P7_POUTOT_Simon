@@ -1,0 +1,7 @@
+venv/
+config.py
+app.db
+.coverage
+.coveragerc
+.env
+htmlcov/

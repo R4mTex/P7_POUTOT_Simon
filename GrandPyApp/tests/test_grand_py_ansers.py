@@ -1,5 +1,6 @@
 from ..scripts.python.grand_py_ansers import Grand_py_ansers
 
+
 def test_should_return_a_positive_anser():
     sut = Grand_py_ansers
     positive_ansers = [
@@ -12,8 +13,9 @@ def test_should_return_a_positive_anser():
             "Peut-être que c'est ça.",
             "D'abord un verre d'eau, puis ta question."
         ]
-    
+
     assert sut.random_positive_anser() in positive_ansers
+
 
 def test_should_return_a_negative_anser():
     sut = Grand_py_ansers
@@ -27,5 +29,5 @@ def test_should_return_a_negative_anser():
             "Il est trop tard pour poser des questions.",
             "Désolé, je perds la mémoire."
         ]
-    
+
     assert sut.random_negative_anser() in negative_ansers

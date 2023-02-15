@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request
 from GrandPyApp.scripts.python.parser import Parser
 from GrandPyApp.scripts.python.geocoder_api import Geocoder
 from GrandPyApp.scripts.python.wikipedia import Wikipedia
@@ -8,9 +8,11 @@ from GrandPyApp.scripts.python.grand_py_ansers import Grand_py_ansers
 app = Flask(__name__)
 app.config.from_object('config')
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/index_question', methods=['POST'])
 def index_question():
@@ -21,9 +23,9 @@ def index_question():
 
     geocoder_request = Geocoder(question_parsed).geocoder_api_request()
     query_location = Geocoder(geocoder_request).get_information_from_the_request()
-    
+
     if query_location['status'] == 'OK':
-        
+
         long_name = query_location['long_name']
         query_lat = query_location['lat']
         query_lng = query_location['lng']
@@ -33,8 +35,8 @@ def index_question():
         data = {
             'status': query_location['status'],
             'long_name': long_name,
-            'lat': query_lat, 
-            'lng': query_lng, 
+            'lat': query_lat,
+            'lng': query_lng,
             'place_id': place_id,
             'wikipedia_summary': wikipedia_summary,
             'random_positive_anser': random_positive_anser,

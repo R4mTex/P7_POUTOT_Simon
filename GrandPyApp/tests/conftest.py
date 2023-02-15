@@ -1,5 +1,6 @@
 import pytest
 
+
 from GrandPyApp.views import app
 
 
@@ -9,6 +10,7 @@ def application():
         "TESTING": True,
     })
     yield app
+
 
 @pytest.fixture()
 def client(application):
