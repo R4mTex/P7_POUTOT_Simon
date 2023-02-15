@@ -4,6 +4,7 @@ from GrandPyApp.scripts.python.geocoder_api import Geocoder
 from GrandPyApp.scripts.python.wikipedia import Wikipedia
 from GrandPyApp.scripts.python.grand_py_ansers import Grand_py_ansers
 
+
 app = Flask(__name__)
 app.config.from_object('config')
 
@@ -48,6 +49,3 @@ def index_question():
             'random_negative_anser': random_negative_anser,
             }
         return data
-        
-
-    #return json.dumps({'status': geocoder_request['status'],'location': query_location}, indent=2)

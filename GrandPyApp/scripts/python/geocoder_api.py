@@ -10,10 +10,6 @@ class Geocoder:
         request = requests.get(f"https://maps.googleapis.com/maps/api/geocode/json?address={self.query}&key={gmk}")
         return request.json()
 
-    def geocoder_api_request_mock_function():
-        response = Geocoder.geocoder_api_request()
-        return response
-
     def get_information_from_the_request(self):
         data_json = self.geocoder_api_request()
 

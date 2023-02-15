@@ -1,29 +1,37 @@
-from ..scripts.python.geocoder_api import Geocoder
+import mock
+from GrandPyApp.scripts.python.geocoder_api import Geocoder
 
-def test_geocoder_api_request_mock_function(monkeypatch):
 
-    def mockreturn():
-        return 100
+"""
+class MockResponse:
+ 
+    @staticmethod
+    def json():
+        return {}
 
-    monkeypatch.setattr(Geocoder, 'geocoder_api_request', mockreturn)
+def test_geocoder_api(mocker):
+    sut = Geocoder(query='')
+    mocker.patch('requests.get', return_value = MockResponse())
+ 
+    expected_value = {}
+    assert sut.geocoder_api_request() == expected_value
+"""
 
-    expected_value = 100
-    assert Geocoder.geocoder_api_request_mock_function() == expected_value
 
-def test_should_get_information_from_the_request():
-    sut = Geocoder('paris')
-    expected_value = {
-        'long_name': 'Paris',
-        'status': 'OK',
-        'lat': 48.856614,
-        'lng': 2.3522219,
-        'place_id': ['ChIJD7fiBh9u5kcRYJSMaMOCCwQ']
-    }
-    assert sut.get_information_from_the_request() == expected_value
+@mock.patch("GrandPyApp.scripts.python.geocoder_api.requests.get")
+def test_geocoder_api_requests_get(mock_requests_get):
+    sut = Geocoder(query='')
+  
+    mock_requests_get.return_value = mock.Mock(name='mock response', **{'status_code': 200, 'json.return_value': {}})
 
-def test_should_just_return_value_status():
-    sut = Geocoder('fsztfdxt')
-    expected_value = {
-        'status' : 'ZERO_RESULTS'
-    }
-    assert sut.get_information_from_the_request() == expected_value
+    assert sut.geocoder_api_request() == {}
+    mock_requests_get.assert_called_once_with('https://maps.googleapis.com/maps/api/geocode/json?address=&key=AIzaSyAVtCfvLbfgSm8528irK1sEq5SpSA0zcKY')
+
+
+@mock.patch("GrandPyApp.scripts.python.geocoder_api.requests.get")
+def test_get_information_from_the_request(mock_requests_get):
+    sut = Geocoder(query='')
+    
+    mock_requests_get.return_value = mock.Mock(name='mock response', **{'status_code': 200, 'json.return_value': {'status': 'OK', 'results': ''}})
+
+    assert sut.get_information_from_the_request() == mock_requests_get.return_value
