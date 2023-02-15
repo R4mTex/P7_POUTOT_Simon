@@ -1,4 +1,4 @@
-# OC_Projet_5 OpenFoodFacts
+# OC_Projet_7 GrandPyApp
 
 Le programme est une interface de communication où l'on demande à GrandPyApp s'il connait un lieu, et en fonction de ses connaissances il nous affiche une Google Map du lieu.
 
