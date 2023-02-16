@@ -1,0 +1,8 @@
+env/
+app.db
+config.py
+.coverage
+.coveragerc
+.env
+htmlcov/
+__pycache__
