@@ -51,4 +51,4 @@ POUTOT Simon.
 
 ### Remerciements
 
-Merci à **GONNAGE Ranga** pour son soutien
+Merci à **GONNAGE Ranga** pour son soutien.
