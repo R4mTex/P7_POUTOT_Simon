@@ -1,4 +1,4 @@
-env/
+/env/
 app.db
 config.py
 .coverage
@@ -6,3 +6,4 @@ config.py
 .env
 htmlcov/
 __pycache__
+.gitignore
