@@ -1,6 +1,7 @@
 from config import GOOGLE_MAPS_KEY
 import requests
 
+
 gmk = GOOGLE_MAPS_KEY
 
 
