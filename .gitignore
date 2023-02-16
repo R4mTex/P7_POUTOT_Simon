@@ -6,3 +6,4 @@ config.py
 .env
 htmlcov/
 __pycache__
+.gitignore
