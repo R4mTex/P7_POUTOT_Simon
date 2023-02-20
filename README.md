@@ -10,7 +10,7 @@ Ces consignes vont vous permettre d'obtenir une copie de mon projet et de le tes
 
 Le programme étant écrit en Python, il doit être installé sur votre ordinateur. Vous pouvez le télécharger à cette adresse : [Télecharger Python](https://www.python.org/downloads/)
 
-Vous aurez aussi besoin d'une API Key valide pour l'utilisation de [Google Maps](https://developers.google.com/maps/get-started?hl=fr#create-project)
+Vous aurez aussi besoin d'une API Key valide pour l'utilisation de [Google Maps](https://developers.google.com/maps/get-started?hl=fr#create-project).
 
 ### Installation
 
