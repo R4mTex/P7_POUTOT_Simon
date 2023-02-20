@@ -1,10 +1,10 @@
 # OC_Projet_7 GrandPyApp
 
-Le programme est une interface de communication où l'on demande à GrandPy s'il connait un lieu, et en fonction de ses connaissances il nous affiche une Google Map du lieu.
+Le programme est une interface de communication où l'on demande à GrandPy s'il connait une adresse, et en fonction de ses connaissances il nous affiche une Google Map du lieu demandé.
 
 ## Tout d'abord 
 
-Ces consignes vont vous permettre d'obtenir une copie de mon projet et de le tester avec la console de votre machine.
+Ces consignes vont vous permettre d'obtenir une copie de mon projet et de le tester avec la console de commandes de votre machine.
 
 ### Pré-requis 
 
@@ -58,6 +58,7 @@ Enfin une URL vous sera donnée : ```* Running on http://127.0.0.1:5000``` suive
 Bon essai.
 
 ## Écrit avec
+
 [VisualStudioCode](https://code.visualstudio.com/) - Editeur de texte
 
 ## Auteur
