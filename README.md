@@ -1,6 +1,6 @@
 # OC_Projet_7 GrandPyApp
 
-Le programme est une interface de communication où l'on demande à GrandPy s'il connait une adresse, et en fonction de ses connaissances il nous affiche une Google Map du lieu demandé.
+Le programme est une interface de communication où l'on demande à GrandPy s'il connait une adresse; en fonction de ses connaissances il nous affiche une Google Map du lieu demandé.
 
 ## Tout d'abord 
 
