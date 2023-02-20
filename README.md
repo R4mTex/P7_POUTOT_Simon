@@ -1,6 +1,6 @@
 # OC_Projet_7 GrandPyApp
 
-Le programme est une interface de communication où l'on demande à GrandPyApp s'il connait un lieu, et en fonction de ses connaissances il nous affiche une Google Map du lieu.
+Le programme est une interface de communication où l'on demande à GrandPy s'il connait un lieu, et en fonction de ses connaissances il nous affiche une Google Map du lieu.
 
 ## Tout d'abord 
 
@@ -10,7 +10,17 @@ Ces consignes vont vous permettre d'obtenir une copie de mon projet et de le tes
 
 Le programme étant écrit en Python, il doit être installé sur votre ordinateur. Vous pouvez le télécharger à cette adresse : [Télecharger Python](https://www.python.org/downloads/)
 
+Vous aurez aussi besoin d'une API Key valide pour l'utilisation de [Google Maps](https://developers.google.com/maps/get-started?hl=fr#create-project)
+
 ### Installation
+
+Tout d'abord, recupérez mon projet avec cette commande : 
+
+```git clone https://github.com/R4mTex/P7_POUTOT_Simon.git``` 
+
+puis placez-vous dans ce dossier : 
+
+```cd P7_POUTOT_Simon```
 
 Pour ne pas interférer avec d'autres projets, il est conseillé d'exécuter celui-ci dans un environnement virtuel. 
 Voici les principales commandes pour :
@@ -34,7 +44,11 @@ Une fois la console placée dans le dossier du fichier, leur installation se fai
 
 ### Initialisation
 
-Si la console est placée dans le dossier du programme, il suffit d'exécuter le fichier avec la commande :
+Veillez à mettre votre clef Google Map valide à la place de "gmk" dans le fichier "geocoder_api.py" se situant ici : 
+
+```P7_POUTOT_Simon\GrandPyApp\scripts\python\geocoder_api.py```
+
+Maintenant, si la console est placée dans le dossier racine du programme, il suffit d'exécuter la commande :
 
 ```python run.py```
 
