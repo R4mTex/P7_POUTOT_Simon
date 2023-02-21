@@ -27,12 +27,19 @@ Voici les principales commandes pour :
 
 1. Créer un environnement virtuel 
 
-windows/mac/linux : ```python3 -m venv env```
+windows/mac/linux : 
+
+```python3 -m venv env```
 
 2. Activer l'environnement virtuel
 
-windows : ```env\Scripts\activate.bat```
-mac/linux : ```source env/bin/activate```
+windows : 
+
+```env\Scripts\activate.bat```
+
+mac/linux : 
+
+```source env/bin/activate```
 
 Pour en apprendre plus sur les environnements virtuels, vous avez toute la documentation à cette adresse : [Documentation Python](https://docs.python.org/fr/3.6/tutorial/venv.html/)
 
