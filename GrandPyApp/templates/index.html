@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GrandPyApp research">
+    <meta name="author" content="POUTOT Simon">
+
+    <title>GrandPyApp</title>
+
+    <link href="/static/images/grand_pere_favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename= 'css/style.css') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../static/js/ajax_request.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVtCfvLbfgSm8528irK1sEq5SpSA0zcKY&v=weekly" defer></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <header>
+                    <div id="titre_principal">
+                        <div id="logo">
+                            <h2 id="titre_GrandPyApp"><img src="{{ url_for('static', filename='images/grand_pere.png') }}" alt="Logo GrandPyApp"/>Bienvenue sur GrandPyApp, l'application qui ne fait pas de vieux os !</h2>
+                        </div> 
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="history" id="history_label">Voici votre historique :</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="form_question" role="form">
+                    <h2 id="form_title_question">Posez votre question</h2>
+                    <div id="form_question_zone">
+                        <input type="search" name="question" id="form_input_question" value="" placeholder="Laquelle ?" size="60" autofocus required >
+                        <img src="{{ url_for('static', filename='images/loading.png') }}" id="loading_icon" class="icon">
+                    </div>
+                    <input type="button" name="button" id="form_send_button" class="btn btn-lg btn-primary btn-block" value="Prés à envoyer" onclick="script()">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <footer id="footer_section">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">POUTOT Simon</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/R4mTex">GitHub</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/simon-poutot-49944b169/">Linkedin</a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
