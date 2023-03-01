@@ -1,5 +1,7 @@
 import string
 import unidecode
+import nltk
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 
 oc_stop_words = ["a", "abord", "absolument", "afin", "ah", "ai", "aie", "ailleurs",
