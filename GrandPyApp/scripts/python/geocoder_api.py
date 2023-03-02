@@ -1,7 +1,7 @@
 import requests
 
 
-gmk = "AIzaSyAVtCfvLbfgSm8528irK1sEq5SpSA0zcKY"
+gmk = "Put Your GOOGLE Map Key Here"
 
 
 class Geocoder:
