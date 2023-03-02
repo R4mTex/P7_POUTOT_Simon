@@ -1,6 +1,6 @@
 import requests
 
-# Put Your API Key Google Map here (between quotes)
+# Put Your API Key Google Maps here (between quotes)
 gmk = ""
 
 
