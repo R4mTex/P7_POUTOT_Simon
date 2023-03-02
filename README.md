@@ -29,7 +29,7 @@ Voici les principales commandes pour :
 
 windows/mac/linux : 
 
-```python3 -m venv env```
+```python -m venv env```
 
 2. Activer l'environnement virtuel
 

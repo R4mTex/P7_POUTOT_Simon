@@ -1,7 +1,7 @@
 import requests
 
-
-gmk = "Put Your GOOGLE Map Key Here"
+# Put Your API Key Google Map here (between quotes)
+gmk = ""
 
 
 class Geocoder:
